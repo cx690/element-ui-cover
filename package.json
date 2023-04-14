@@ -5,7 +5,7 @@
     "name": "caixue",
     "email": "caixue233@gmail.com"
   },
-  "version": "2.0.1",
+  "version": "2.0.0",
   "types": "index.d.ts",
   "license": "MIT",
   "devDependencies": {
@@ -27,7 +27,8 @@
     "index.d.ts",
     "button.png",
     "buttonjsx.png",
-    "error.png"
+    "error.png",
+    "README.md"
   ],
   "publishConfig": {
     "access": "public",
