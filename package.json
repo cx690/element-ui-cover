@@ -1,0 +1,39 @@
+{
+  "name": "element-ui-cover",
+  "description": "A libaray for element-ui types,use it can transfer element-ui class properties to vue2.7 defineComponent's propsType.",
+  "author": {
+    "name": "caixue",
+    "email": "caixue233@gmail.com"
+  },
+  "version": "2.0.0-rc.1",
+  "types": "index.d.ts",
+  "license": "MIT",
+  "devDependencies": {
+    "element-ui": "^2.15.13",
+    "typescript": "^4.9.5",
+    "vue": "^2.7.14"
+  },
+  "peerDependencies": {
+    "element-ui": "^2.0.0",
+    "vue": "^2.7.0"
+  },
+  "keywords": [
+    "element-ui",
+    "@types/element-ui",
+    "@types/element-ui-cover",
+    "element-ui-types"
+  ],
+  "files": [
+    "index.d.ts",
+    "button.png",
+    "buttonjsx.png",
+    "error.png"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
+  "repository": {
+    "url": "https://github.com/cx690/element-ui-cover"
+  }
+}
