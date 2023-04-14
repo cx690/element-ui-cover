@@ -1,7 +1,7 @@
 Use this types library,Youe can get `correct type derivation` when use element-ui,it can cover element-ui's types export.
 
 # install
-`yarn add element-ui-cover`
+`yarn add element-ui-cover --dev`
 
 # tsconfig
 Add flow config in your tsconfig.json.
