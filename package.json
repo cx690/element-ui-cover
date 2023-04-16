@@ -30,7 +30,7 @@
     "buttonjsx.png",
     "error.png",
     "com.g.png",
-    "component.g.d",
+    "component.g.d.ts",
     "README.md"
   ],
   "publishConfig": {
