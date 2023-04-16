@@ -16,6 +16,7 @@
   "include": [
     "test/**/*.tsx",
     "test/**/*.vue",
-    "index.d.ts"
+    "index.d.ts",
+    "component.g.d.ts"
   ]
 }

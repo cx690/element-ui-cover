@@ -1,4 +1,4 @@
-// Type definitions for npm package element-ui 2.0.0
+// Type definitions for npm package element-ui 2.15.0
 // Project: https://element.eleme.cn/
 // Definitions by: caixue <https://github.com/cx690>
 // Definitions(not merged): https://github.com/DefinitelyTyped/DefinitelyTyped
