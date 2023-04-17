@@ -73,15 +73,15 @@ declare module 'element-ui' {
         onChange: (activeIndex: number, oldActiveIndex: number) => any;
     }>>;
     export const CarouselItem: DefineComponent<Partial<ElementUi.CarouselItem>>;
-    export const Checkbox: DefineComponent<Partial<ElementUi.Checkbox> & {
+    export const Checkbox: DefineComponent<Partial<ElementUi.Checkbox & {
         onChange: (value: any) => any;
         onInput: (value: any) => any;
-    }>;
+    }>>;
     export const CheckboxButton: DefineComponent<Partial<ElementUi.CheckboxButton>>;
-    export const CheckboxGroup: DefineComponent<Partial<ElementUi.CheckboxGroup> & {
+    export const CheckboxGroup: DefineComponent<Partial<ElementUi.CheckboxGroup& {
         onChange: (value: any) => any;
         onInput: (value: any) => any;
-    }>;
+    }>>;
     export const Col: DefineComponent<Partial<ElementUi.Col>>;
     export const Collapse: DefineComponent<Partial<ElementUi.Collapse & {
         onChange: (...args: any[]) => any;
@@ -197,13 +197,13 @@ declare module 'element-ui' {
         onChange: (value: any) => any;
         onInput: (value: any) => any;
     }>>;
-    export const Radio: DefineComponent<Partial<ElementUi.Radio> & {
+    export const Radio: DefineComponent<Partial<ElementUi.Radio & {
         onInput: (value: any) => any;
-    }>;
+    }>>;
     export const RadioButton: DefineComponent<Partial<ElementUi.RadioButton>>;
-    export const RadioGroup: DefineComponent<Partial<ElementUi.RadioGroup> & {
+    export const RadioGroup: DefineComponent<Partial<ElementUi.RadioGroup & {
         onInput: (value: any) => any;
-    }>;
+    }>>;
     export const Row: DefineComponent<Partial<ElementUi.Row>>;
     export const Select: DefineComponent<Partial<Omit<ElementUi.Select, 'blur' | 'focus'> & {
         onChange: (value: any) => any;
