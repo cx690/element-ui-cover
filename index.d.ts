@@ -78,7 +78,7 @@ declare module 'element-ui' {
         onInput: (value: any) => any;
     }>>;
     export const CheckboxButton: DefineComponent<Partial<ElementUi.CheckboxButton>>;
-    export const CheckboxGroup: DefineComponent<Partial<ElementUi.CheckboxGroup& {
+    export const CheckboxGroup: DefineComponent<Partial<ElementUi.CheckboxGroup & {
         onChange: (value: any) => any;
         onInput: (value: any) => any;
     }>>;
@@ -245,7 +245,10 @@ declare module 'element-ui' {
         onInput: (value: any) => any;
     }>>;
     export const Table: DefineComponent<Partial<Omit<ElementUi.Table, 'clearSelection' | 'toggleRowSelection' | 'toggleAllSelection' | 'toggleRowExpansion'
-        | 'setCurrentRow' | 'clearSort' | 'clearFilter' | 'doLayout' | 'sort'> & {
+        | 'setCurrentRow' | 'clearSort' | 'clearFilter' | 'doLayout' | 'sort' | 'rowKey'> & {
+            /** key of row data, used for optimizing rendering. Required if reserve-selection is on or display tree data. When its type is String, 
+             * multi-level access is supported, e.g. user.info.id, but user.info[0].id is not supported, in which case Function should be used. */
+            rowKey?: string | ((row: Record<string, any>) => any);
             onSelect: (selection: any[], row: any) => any;
             'on-select-all': (selection: any[]) => any;
             'on-selection-change': (selection: any[]) => any;

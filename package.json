@@ -31,7 +31,11 @@
     "error.png",
     "com.g.png",
     "component.g.d.ts",
-    "README.md"
+    "slots.png",
+    "comopt.png",
+    "events.png",
+    "README.md",
+    "README_zh_CN.md"
   ],
   "publishConfig": {
     "access": "public",

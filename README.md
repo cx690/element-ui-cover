@@ -1,10 +1,11 @@
+- [中文说明](https://github.com/cx690/element-ui-cover/blob/main/README_zh_CN.md "中文说明")
 Use this types library,Youe can get `correct type derivation` when use element-ui,it can cover element-ui's types export.
 
 # install
 `yarn add element-ui-cover --dev`
 
 # tsconfig
-Add flow config in your tsconfig.json.
+Add below config in your tsconfig.json.
 ```js
 { 
  "compilerOptions": {
@@ -18,26 +19,24 @@ Add flow config in your tsconfig.json.
 
 # result view
 ### for template (with vscode plugin Volar)
-tsconfig.json add config at flow:
+tsconfig.json add config as below:
 ```js
 { 
  "vueCompilerOptions": {
-    "extensions": [
-      ".vue"
-    ],
     "target": 2.7
   },
   ...others,
 }
 ```
-![basic usage](./button.png)
+![template view](./button.png)
 
 ### for tsx
 - The [@vue/babel-preset-jsx](https://github.com/vuejs/jsx-vue2) transition property `scopedSlots` to slots,so the slots use `scopedSlots`;
-![basic usage](./buttonjsx.png)
+![tsx view](./buttonjsx.png)
+![slots view](./slots.png)
 
 ### for global components
-If element-ui components is registered as global components, set config as flow:
+If element-ui components is registered as global components, set config as below:
 - Install `@vue/runtime-core`
   `yarn add @vue/runtime-core --dev`
 
@@ -54,10 +53,14 @@ If element-ui components is registered as global components, set config as flow:
 }
 ```
 Then it will work:
-![basic usage](./com.g.png)
+![global components view](./com.g.png)
+![global components option view](./comopt.png)
+
+Some events is also supported.
+![events view](./events.png)
 
 ### type error
-![basic usage](./error.png)
+![type error view](./error.png)
 
 # peerDependencies
 vue and element-ui is required.
