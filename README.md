@@ -1,5 +1,5 @@
 - [中文说明](https://github.com/cx690/element-ui-cover/blob/main/README_zh_CN.md "中文说明")
-Use this types library,Youe can get `correct type derivation` when use element-ui,it can cover element-ui's types export.
+- Use this types library,Youe can get `correct type derivation` when use element-ui,it can cover element-ui's types export.
 
 # install
 `yarn add element-ui-cover --dev`
