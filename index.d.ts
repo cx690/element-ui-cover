@@ -43,7 +43,12 @@ declare module 'element-ui' {
             default?: () => VNodes,
             /** title content */
             title?: () => VNodes,
-        }
+        },
+        $scopedSlots: {
+            default?: () => VNodes,
+            /** title content */
+            title?: () => VNodes,
+        },
     }>;
     export const Aside: DefineComponent<Partial<ElementUi.Aside>>;
     export const Autocomplete: DefineComponent<Partial<Omit<ElementUi.Autocomplete, 'focus'>>>;
@@ -67,7 +72,13 @@ declare module 'element-ui' {
             default?: (scoped: { node: any, data: any }) => VNodes,
             /** content when there is no matched options. */
             empty?: () => VNodes,
-        }
+        },
+        $scopedSlots: {
+            /** the custom content of cascader node, the parameter is { node, data }, which are current Node object and node data respectively. */
+            default?: (scoped: { node: any, data: any }) => VNodes,
+            /** content when there is no matched options. */
+            empty?: () => VNodes,
+        },
     }>>;
     export const Carousel: DefineComponent<Partial<Omit<ElementUi.Carousel, 'setActiveItem' | 'prev' | 'next'> & {
         onChange: (activeIndex: number, oldActiveIndex: number) => any;
@@ -112,7 +123,15 @@ declare module 'element-ui' {
             title?: (error: any) => VNodes,
             /** content of the Dialog footer */
             footer?: (error: any) => VNodes,
-        }
+        },
+        $scopedSlots: {
+            /** content of Dialog */
+            default?: () => VNodes,
+            /** content of the Dialog title */
+            title?: (error: any) => VNodes,
+            /** content of the Dialog footer */
+            footer?: (error: any) => VNodes,
+        },
     }>>;
     export const Dropdown: DefineComponent<Partial<ElementUi.Dropdown & {
         onClick: () => any;
@@ -124,7 +143,13 @@ declare module 'element-ui' {
             default?: () => VNodes,
             /** content of the Dropdown Menu, usually a <el-dropdown-menu> element */
             dropdown?: (error: any) => VNodes,
-        }
+        },
+        $scopedSlots: {
+            /** content of Dropdown. Notice: Must be a valid html dom element (ex. <span>, <button> etc.) or el-component, to attach the trigger listener */
+            default?: () => VNodes,
+            /** content of the Dropdown Menu, usually a <el-dropdown-menu> element */
+            dropdown?: (error: any) => VNodes,
+        },
     }>>;
     export const DropdownItem: DefineComponent<Partial<ElementUi.DropdownItem>>;
     export const DropdownMenu: DefineComponent<Partial<ElementUi.DropdownMenu>>;
@@ -142,7 +167,15 @@ declare module 'element-ui' {
             label?: () => VNodes,
             /** Custom content to display validation message. The scope parameter is { error } */
             error?: (error: any) => VNodes,
-        }
+        },
+        $scopedSlots: {
+            /** content of Form Item */
+            default?: () => VNodes,
+            /** content of label */
+            label?: () => VNodes,
+            /** Custom content to display validation message. The scope parameter is { error } */
+            error?: (error: any) => VNodes,
+        },
     }>>;
     export const Header: DefineComponent<Partial<ElementUi.Header>>;
     export const Input: DefineComponent<Partial<Omit<ElementUi.Input, 'type' | 'blur' | 'focus' | 'select'> & {
@@ -176,8 +209,12 @@ declare module 'element-ui' {
         /** slot */
         scopedSlots: {
             /** custom content. To use this, you need to declare slot in layout */
-            default?: () => any;
-        }
+            default?: () => VNodes;
+        },
+        $scopedSlots: {
+            /** custom content. To use this, you need to declare slot in layout */
+            default?: () => VNodes;
+        },
     }>>;
     export const Popover: DefineComponent<Partial<ElementUi.Popover & {
         'onShow': () => any;
@@ -187,10 +224,16 @@ declare module 'element-ui' {
         /** slot */
         scopedSlots: {
             /** text content of popover */
-            default?: () => any;
+            default?: () => VNodes;
             /** HTML element that triggers popover */
-            reference?: () => any;
-        }
+            reference?: () => VNodes;
+        },
+        $scopedSlots: {
+            /** text content of popover */
+            default?: () => VNodes;
+            /** HTML element that triggers popover */
+            reference?: () => VNodes;
+        },
     }>>;
     export const Progress: DefineComponent<Partial<ElementUi.Progress>>;
     export const Rate: DefineComponent<Partial<ElementUi.Rate & {
@@ -221,7 +264,15 @@ declare module 'element-ui' {
             prefix?: () => VNodes,
             /** content when there is no options */
             empty?: () => VNodes,
-        }
+        },
+        $scopedSlots: {
+            /** option list */
+            default?: () => VNodes,
+            /** content as Select prefix */
+            prefix?: () => VNodes,
+            /** content when there is no options */
+            empty?: () => VNodes,
+        },
     }>>;
     export const Slider: DefineComponent<Partial<ElementUi.Slider & {
         onChange: (value: any) => any;
@@ -236,7 +287,15 @@ declare module 'element-ui' {
             title?: () => VNodes,
             /** step description */
             description?: () => VNodes,
-        }
+        },
+        $scopedSlots: {
+            /** custom icon */
+            icon?: () => VNodes,
+            /** step title */
+            title?: () => VNodes,
+            /** step description */
+            description?: () => VNodes,
+        },
     }>>;
     export const Steps: DefineComponent<Partial<ElementUi.Steps>>;
     export const Submenu: DefineComponent<Partial<ElementUi.Submenu>>;
@@ -272,7 +331,13 @@ declare module 'element-ui' {
                 /** Contents to be inserted after the last row. You may need this slot if you want to implement infinite scroll for
                  *  the table. This slot will be displayed above the summary row if there is one. */
                 append?: () => VNodes,
-            }
+            },
+            $scopedSlots: {
+                default?: () => VNodes,
+                /** Contents to be inserted after the last row. You may need this slot if you want to implement infinite scroll for
+                 *  the table. This slot will be displayed above the summary row if there is one. */
+                append?: () => VNodes,
+            },
         }>>;
     export const TableColumn: DefineComponent<Partial<ElementUi.TableColumn & {
         /** slot */
@@ -281,7 +346,13 @@ declare module 'element-ui' {
             default: (scoped: { row: any, column: any, $index: number }) => VNodes,
             /** Custom content for table header. The scope parameter is { column, $index } */
             header?: (scoped: { column: any, $index: number }) => VNodes,
-        }
+        },
+        $scopedSlots: {
+            /** Custom content for table columns. The scope parameter is { row, column, $index } */
+            default: (scoped: { row: any, column: any, $index: number }) => VNodes,
+            /** Custom content for table header. The scope parameter is { column, $index } */
+            header?: (scoped: { column: any, $index: number }) => VNodes,
+        },
     }>>;
     export const Tabs: DefineComponent<Partial<ElementUi.Tabs & {
         'on-tab-click': (name: string) => any;
@@ -303,7 +374,13 @@ declare module 'element-ui' {
             default?: () => VNodes,
             /** Custom defined node */
             dot?: () => VNodes,
-        }
+        },
+        $scopedSlots: {
+            /** Custom content for timeline item */
+            default?: () => VNodes,
+            /** Custom defined node */
+            dot?: () => VNodes,
+        },
     }>>;
     export const TimePicker: DefineComponent<Partial<Omit<ElementUi.TimePicker, 'focus'> & {
         onChange: (value: any) => any;
@@ -339,7 +416,11 @@ declare module 'element-ui' {
             scopedSlots: {
                 /** Custom content for tree nodes. The scope parameter is { node, data } */
                 default?: (scoped: { node: any, data: any }) => VNodes,
-            }
+            },
+            $scopedSlots: {
+                /** Custom content for tree nodes. The scope parameter is { node, data } */
+                default?: (scoped: { node: any, data: any }) => VNodes,
+            },
         }>>;
     export const Upload: DefineComponent<Partial<Omit<ElementUi.Upload, 'clearFiles' | 'abort' | 'submit'> & {
         onInput: (value: any) => any;
@@ -350,7 +431,14 @@ declare module 'element-ui' {
             trigger?: () => VNodes,
             /** content of tips */
             tip?: () => VNodes,
-        }
+        },
+        $scopedSlots: {
+            default?: () => VNodes,
+            /** content which triggers file dialog */
+            trigger?: () => VNodes,
+            /** content of tips */
+            tip?: () => VNodes,
+        },
     }>>;
     export const Divider: DefineComponent<Partial<ElementUi.Divider>>;
     export const Link: DefineComponent<Partial<ElementUi.Link>>;
@@ -363,7 +451,13 @@ declare module 'element-ui' {
             placeholder?: () => VNodes,
             /** Triggers when image load failed */
             error?: () => VNodes,
-        }
+        },
+        $scopedSlots: {
+            /** Triggers when image load */
+            placeholder?: () => VNodes,
+            /** Triggers when image load failed */
+            error?: () => VNodes,
+        },
     }>>;
     export const Icon: DefineComponent<Partial<ElementUi.Icon>>;
     export const Calendar: DefineComponent<Partial<ElementUi.Calendar & {
@@ -373,7 +467,13 @@ declare module 'element-ui' {
             date?: (date: Date) => VNodes,
             /** content */
             data?: (scoped: { type: string, isSelected: boolean, day: string }) => VNodes,
-        }
+        },
+        $scopedSlots: {
+            /** date the cell represents */
+            date?: (date: Date) => VNodes,
+            /** content */
+            data?: (scoped: { type: string, isSelected: boolean, day: string }) => VNodes,
+        },
     }>>;
     export const Backtop: DefineComponent<Partial<ElementUi.Backtop & {
         onClick: (e: Event) => any;
@@ -386,6 +486,12 @@ declare module 'element-ui' {
             title?: () => VNodes,
             /** content */
             content?: () => VNodes,
+        },
+        $scopedSlots: {
+            /** title content */
+            title?: () => VNodes,
+            /** content */
+            content?: () => VNodes,
         }
     }>>;
     export const Avatar: DefineComponent<Partial<ElementUi.Avatar & {
@@ -393,7 +499,10 @@ declare module 'element-ui' {
         /** slot */
         scopedSlots: {
             default?: () => VNodes,
-        }
+        },
+        $scopedSlots: {
+            default?: () => VNodes,
+        },
     }>>;
     export const Drawer: DefineComponent<Partial<Omit<ElementUi.Drawer, '$slots'> & {
         onOpen: () => any;
@@ -406,7 +515,13 @@ declare module 'element-ui' {
             default?: () => VNodes,
             /** Drawer Title Section */
             title?: () => VNodes,
-        }
+        },
+        $scopedSlots: {
+            /** Drawer's Content */
+            default?: () => VNodes,
+            /** Drawer Title Section */
+            title?: () => VNodes,
+        },
     }>>;
     export const Statistic: DefineComponent<Partial<ElementUi.Statistic & {
         /** Enable in the 'countdown' function */
@@ -422,7 +537,12 @@ declare module 'element-ui' {
             default?: () => VNodes,
             /** HTML element that triggers Popconfirm */
             reference?: () => VNodes,
-        }
+        },
+        $scopedSlots: {
+            default?: () => VNodes,
+            /** HTML element that triggers Popconfirm */
+            reference?: () => VNodes,
+        },
     }>>;
     export const Skeleton: DefineComponent<Partial<ElementUi.Skeleton & {
         /** slot */
@@ -431,7 +551,13 @@ declare module 'element-ui' {
             default?: () => VNodes,
             /** Custom rendering skeleton template */
             template?: () => VNodes,
-        }
+        },
+        $scopedSlots: {
+            /** Real rendering DOM */
+            default?: () => VNodes,
+            /** Custom rendering skeleton template */
+            template?: () => VNodes,
+        },
     }>>;
     export const SkeletonItem: DefineComponent<Partial<ElementUi.SkeletonItem>>;
     export const CascaderPanel: DefineComponent<Partial<ElementUi.CascaderPanel>>;
@@ -444,7 +570,15 @@ declare module 'element-ui' {
             image?: () => VNodes,
             /** Custom description */
             description?: () => VNodes,
-        }
+        },
+        $scopedSlots: {
+            /** Custom bottom content */
+            default?: () => VNodes,
+            /** Custom image */
+            image?: () => VNodes,
+            /** Custom description */
+            description?: () => VNodes,
+        },
     }>>;
     export const Spinner: DefineComponent<Partial<ElementUi.Spinner>>;
     export const Descriptions: DefineComponent<Partial<ElementUi.Descriptions & {
@@ -455,7 +589,14 @@ declare module 'element-ui' {
             title?: () => VNodes,
             /** custom extra area, display on the top right */
             extra?: () => VNodes,
-        }
+        },
+        $scopedSlots: {
+            default?: () => VNodes,
+            /** custom title, display on the top left */
+            title?: () => VNodes,
+            /** custom extra area, display on the top right */
+            extra?: () => VNodes,
+        },
     }>>;
     export const DescriptionsItem: DefineComponent<Partial<ElementUi.DescriptionsItem & {
         /** slot */
@@ -463,7 +604,12 @@ declare module 'element-ui' {
             default?: () => VNodes,
             /**	custom label */
             label?: () => VNodes,
-        }
+        },
+        $scopedSlots: {
+            default?: () => VNodes,
+            /**	custom label */
+            label?: () => VNodes,
+        },
     }>>;
     export const Result: DefineComponent<Partial<ElementUi.Result & {
         /** slot */
@@ -476,6 +622,16 @@ declare module 'element-ui' {
             subTitle?: () => VNodes,
             /** custom extra area */
             extra?: () => VNodes,
-        }
+        },
+        $scopedSlots: {
+            /** custom icon */
+            icon?: () => VNodes,
+            /** custom title */
+            title?: () => VNodes,
+            /** custom sub title */
+            subTitle?: () => VNodes,
+            /** custom extra area */
+            extra?: () => VNodes,
+        },
     }>>;
 }

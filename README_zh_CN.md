@@ -24,24 +24,24 @@ tsconfig.json 中需要增加以下配置：
  "vueCompilerOptions": {
     "target": 2.7
   },
+  "compilerOptions": {
+      "types": [
+      "element-ui-cover"
+      ]
+  },
   ...others,
 }
 ```
 ![template view](./button.png)
 
-### 对tsx语法
-- 由于 [@vue/babel-preset-jsx](https://github.com/vuejs/jsx-vue2) 转换属性 `scopedSlots` 为插槽,所以内部插槽使用了 `scopedSlots` 属性声明;
-![tsx view](./buttonjsx.png)
-![slots view](./slots.png)
-
-### 对于全局组件
+### 对于全局组件 (需要使用 vscode 的插件 Volar)
 如果element-ui被注册为全局组件使用，按照以下设置即可：
-- 安装库 `@vue/runtime-core`
-  `yarn add @vue/runtime-core --dev`
-
 - 在tsconfig.json中增加types设置：
 ```js
 { 
+  "vueCompilerOptions": {
+    "target": 2.7
+  },
  "compilerOptions": {
     "types": [
       "element-ui-cover",
@@ -58,6 +58,11 @@ tsconfig.json 中需要增加以下配置：
 甚至部分事件也有支持
 ![events view](./events.png)
 
+### 对tsx语法
+- 由于 [@vue/babel-preset-jsx](https://github.com/vuejs/jsx-vue2) 转换属性 `scopedSlots` 为插槽,所以内部插槽使用了 `scopedSlots` 属性声明(但是Volar使用`$scopedSlots`,这是个问题);
+![tsx view](./buttonjsx.png)
+![slots view](./slots.png)
+
 ### 类型错误
 ![type error view](./error.png)
 
@@ -65,4 +70,3 @@ tsconfig.json 中需要增加以下配置：
 vue和element-ui两个库是必须的。
 - vue version ^2.7.0
 - element-ui version ^2.0.0 (^2.15.0 以上会更好)
-- @vue/runtime-core version ^3.0.0 (如果使用全局组件必须安装这个)

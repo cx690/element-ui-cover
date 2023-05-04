@@ -1,6 +1,5 @@
-import '@vue/runtime-core';
-
-declare module '@vue/runtime-core' {
+import Vue from 'vue'
+declare module 'vue' {
     export interface GlobalComponents {
         ElAlert: typeof import('element-ui')['Alert']
         ElAside: typeof import('element-ui')['Aside']
