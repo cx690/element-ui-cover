@@ -1,4 +1,3 @@
-import Vue from 'vue'
 declare module 'vue' {
     export interface GlobalComponents {
         ElAlert: typeof import('element-ui')['Alert']
@@ -84,3 +83,5 @@ declare module 'vue' {
         ElResult: typeof import('element-ui')['Result']
     }
 }
+
+export {}
