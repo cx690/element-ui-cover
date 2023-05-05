@@ -58,6 +58,20 @@ declare module 'element-ui' {
     export const BreadcrumbItem: DefineComponent<Partial<ElementUi.BreadcrumbItem>>;
     export const Button: DefineComponent<Partial<ElementUi.Button>>;
     export const ButtonGroup: DefineComponent<Partial<ElementUi.ButtonGroup>>;
+    export const Card: DefineComponent<Partial<Omit<ElementUi.Card, '$slots'> & {
+        /** slots for tsx */
+        scopedSlots: {
+            default?: () => VNodes,
+            /** content of the Card header */
+            header?: () => VNodes,
+        },
+        /** slots for template */
+        $scopedSlots: {
+            default?: () => VNodes,
+            /** content of the Card header */
+            header?: () => VNodes,
+        },
+    }>>;
     export const Cascader: DefineComponent<Partial<Omit<ElementUi.Cascader, '$slots'> & {
         onChange: (value: any) => any;
         onInput: (value: any) => any;

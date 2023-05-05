@@ -7,6 +7,7 @@ declare module 'vue' {
         ElBreadcrumbItem: typeof import('element-ui')['BreadcrumbItem']
         ElButton: typeof import('element-ui')['Button']
         ElButtonGroup: typeof import('element-ui')['ButtonGroup']
+        ElCard: typeof import('element-ui')['Card']
         ElCascader: typeof import('element-ui')['Cascader']
         ElCarousel: typeof import('element-ui')['Carousel']
         ElCarouselItem: typeof import('element-ui')['CarouselItem']
