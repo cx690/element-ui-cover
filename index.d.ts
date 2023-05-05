@@ -136,18 +136,18 @@ declare module 'element-ui' {
             /** content of Dialog */
             default?: () => VNodes,
             /** content of the Dialog title */
-            title?: (error: any) => VNodes,
+            title?: () => VNodes,
             /** content of the Dialog footer */
-            footer?: (error: any) => VNodes,
+            footer?: () => VNodes,
         },
         /** slots for template */
         $scopedSlots: {
             /** content of Dialog */
             default?: () => VNodes,
             /** content of the Dialog title */
-            title?: (error: any) => VNodes,
+            title?: () => VNodes,
             /** content of the Dialog footer */
-            footer?: (error: any) => VNodes,
+            footer?: () => VNodes,
         },
     }>>;
     export const Dropdown: DefineComponent<Partial<ElementUi.Dropdown & {
@@ -159,14 +159,14 @@ declare module 'element-ui' {
             /** content of Dropdown. Notice: Must be a valid html dom element (ex. <span>, <button> etc.) or el-component, to attach the trigger listener */
             default?: () => VNodes,
             /** content of the Dropdown Menu, usually a <el-dropdown-menu> element */
-            dropdown?: (error: any) => VNodes,
+            dropdown?: () => VNodes,
         },
         /** slots for template */
         $scopedSlots: {
             /** content of Dropdown. Notice: Must be a valid html dom element (ex. <span>, <button> etc.) or el-component, to attach the trigger listener */
             default?: () => VNodes,
             /** content of the Dropdown Menu, usually a <el-dropdown-menu> element */
-            dropdown?: (error: any) => VNodes,
+            dropdown?: () => VNodes,
         },
     }>>;
     export const DropdownItem: DefineComponent<Partial<ElementUi.DropdownItem>>;
