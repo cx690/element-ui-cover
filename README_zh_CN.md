@@ -66,6 +66,9 @@ tsconfig.json 中需要增加以下配置：
 ### 类型错误
 ![type error view](./error.png)
 
+### ref 获取实例类型
+![instance type view](./methods.png)
+
 # peerDependencies 预依赖
 vue和element-ui两个库是必须的。
 - vue version ^2.7.0

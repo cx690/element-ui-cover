@@ -67,6 +67,9 @@ Some events is also supported.
 ### type error
 ![type error view](./error.png)
 
+### ref get instance type
+![instance type view](./methods.png)
+
 # peerDependencies
 vue and element-ui is required.
 - vue version ^2.7.0
