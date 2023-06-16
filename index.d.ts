@@ -97,7 +97,9 @@ declare module 'element-ui' {
             empty?: () => VNodes,
         },
     }>>;
-    export const Carousel: DefineComponent<Partial<Omit<ElementUi.Carousel, 'setActiveItem' | 'prev' | 'next'> & {
+    export const Carousel: DefineComponent<Partial<Omit<ElementUi.Carousel, 'setActiveItem' | 'prev' | 'next' | 'height'> & {
+        /** height of the carousel */
+        height: string;
         onChange: (activeIndex: number, oldActiveIndex: number) => any;
     }>, {}, {}, ComputedOptions, Pick<ElementUi.Carousel, 'setActiveItem' | 'prev' | 'next'>>;
     export const CarouselItem: DefineComponent<Partial<ElementUi.CarouselItem>>;
