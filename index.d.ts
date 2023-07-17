@@ -103,12 +103,14 @@ declare module 'element-ui' {
         onChange: (activeIndex: number, oldActiveIndex: number) => any;
     }>, {}, {}, ComputedOptions, Pick<ElementUi.Carousel, 'setActiveItem' | 'prev' | 'next'>>;
     export const CarouselItem: DefineComponent<Partial<ElementUi.CarouselItem>>;
-    export const Checkbox: DefineComponent<Partial<ElementUi.Checkbox & {
+    export const Checkbox: DefineComponent<Partial<Omit<ElementUi.Checkbox, 'value'> & {
+        value?: string | number | boolean;
         onChange: (value: any) => any;
         onInput: (value: any) => any;
     }>>;
     export const CheckboxButton: DefineComponent<Partial<ElementUi.CheckboxButton>>;
     export const CheckboxGroup: DefineComponent<Partial<ElementUi.CheckboxGroup & {
+        value?: any[];
         onChange: (value: any) => any;
         onInput: (value: any) => any;
     }>>;
@@ -130,6 +132,7 @@ declare module 'element-ui' {
         onBlur: (e: Event) => any;
     }>, {}, {}, ComputedOptions, Pick<ElementUi.DatePicker, 'focus'>>;
     export const Dialog: DefineComponent<Partial<ElementUi.Dialog & {
+        visible?: boolean;
         onOpen: () => any;
         onOpened: () => any;
         onClose: () => any;
