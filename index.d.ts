@@ -33,7 +33,7 @@ type VNode = import('vue').VNode | string | number | boolean | null | undefined;
 type VNodes = VNode | VNode[];
 
 declare module 'element-ui' {
-    import type { DefineComponent, ComputedOptions } from 'vue';
+    import type { DefineComponent } from 'vue';
     export * from 'element-ui/types/index';
     import ElementUi from 'element-ui/types/index';
     export const Alert: DefineComponent<Partial<ElementUi.Alert> & {
@@ -53,7 +53,7 @@ declare module 'element-ui' {
     }>;
     export const Aside: DefineComponent<Partial<ElementUi.Aside>>;
     export const Autocomplete: DefineComponent<Partial<Omit<ElementUi.Autocomplete, 'focus'>
-    >, {}, {}, ComputedOptions<any>, Pick<ElementUi.Autocomplete, 'focus'>>;
+    >, {}, {}, {}, Pick<ElementUi.Autocomplete, 'focus'>>;
     export const Badge: DefineComponent<Partial<ElementUi.Badge>>;
     export const Breadcrumb: DefineComponent<Partial<ElementUi.Breadcrumb>>;
     export const BreadcrumbItem: DefineComponent<Partial<ElementUi.BreadcrumbItem>>;
@@ -101,7 +101,7 @@ declare module 'element-ui' {
         /** height of the carousel */
         height: string;
         onChange: (activeIndex: number, oldActiveIndex: number) => any;
-    }>, {}, {}, ComputedOptions<any>, Pick<ElementUi.Carousel, 'setActiveItem' | 'prev' | 'next'>>;
+    }>, {}, {}, {}, Pick<ElementUi.Carousel, 'setActiveItem' | 'prev' | 'next'>>;
     export const CarouselItem: DefineComponent<Partial<ElementUi.CarouselItem>>;
     export const Checkbox: DefineComponent<Partial<Omit<ElementUi.Checkbox, 'value'> & {
         value?: string | number | boolean;
@@ -130,7 +130,7 @@ declare module 'element-ui' {
         onInput: (value: any) => any;
         onFocus: (e: Event) => any;
         onBlur: (e: Event) => any;
-    }>, {}, {}, ComputedOptions<any>, Pick<ElementUi.DatePicker, 'focus'>>;
+    }>, {}, {}, {}, Pick<ElementUi.DatePicker, 'focus'>>;
     export const Dialog: DefineComponent<Partial<ElementUi.Dialog & {
         visible?: boolean;
         onOpen: () => any;
@@ -180,7 +180,7 @@ declare module 'element-ui' {
     export const Footer: DefineComponent<Partial<ElementUi.Footer>>;
     export const Form: DefineComponent<Partial<Omit<ElementUi.Form, 'validate' | 'validateField' | 'resetFields' | 'clearValidate'> & {
         onValidate: (...args: any[]) => any;
-    }>, {}, {}, ComputedOptions<any>, Pick<ElementUi.Form, 'validate' | 'validateField' | 'resetFields' | 'clearValidate'>>;
+    }>, {}, {}, {}, Pick<ElementUi.Form, 'validate' | 'validateField' | 'resetFields' | 'clearValidate'>>;
     export const FormItem: DefineComponent<Partial<Omit<ElementUi.FormItem, 'resetField' | 'clearValidate'> & {
         /** slots for tsx */
         scopedSlots: {
@@ -200,7 +200,7 @@ declare module 'element-ui' {
             /** Custom content to display validation message. The scope parameter is { error } */
             error?: (error: any) => VNodes,
         },
-    }>, {}, {}, ComputedOptions<any>, Pick<ElementUi.FormItem, 'resetField' | 'clearValidate'>>;
+    }>, {}, {}, {}, Pick<ElementUi.FormItem, 'resetField' | 'clearValidate'>>;
     export const Header: DefineComponent<Partial<ElementUi.Header>>;
     export const Input: DefineComponent<Partial<Omit<ElementUi.Input, 'type' | 'blur' | 'focus' | 'select'> & {
         type: HTMLInputElement['type'];
@@ -210,7 +210,7 @@ declare module 'element-ui' {
         onBlur: (e: Event) => any;
         onInput: (value: any) => any;
         onClear: () => any;
-    }>, {}, {}, ComputedOptions<any>, Pick<ElementUi.Input, 'blur' | 'focus' | 'select'>>;
+    }>, {}, {}, {}, Pick<ElementUi.Input, 'blur' | 'focus' | 'select'>>;
     export const InputNumber: DefineComponent<Partial<Omit<ElementUi.InputNumber, 'focus'> & {
         onSelect: () => any;
         onChange: (value: any) => any;
@@ -218,7 +218,7 @@ declare module 'element-ui' {
         onBlur: (e: Event) => any;
         onInput: (value: any) => any;
         onClear: () => any;
-    }>, {}, {}, ComputedOptions<any>, Pick<ElementUi.InputNumber, 'focus'>>;
+    }>, {}, {}, {}, Pick<ElementUi.InputNumber, 'focus'>>;
     export const Main: DefineComponent<Partial<ElementUi.Main>>;
     export const Menu: DefineComponent<Partial<ElementUi.Menu>>;
     export const MenuItem: DefineComponent<Partial<ElementUi.MenuItem>>;
@@ -300,7 +300,7 @@ declare module 'element-ui' {
             /** content when there is no options */
             empty?: () => VNodes,
         },
-    }>, {}, {}, ComputedOptions<any>, Pick<ElementUi.Select, 'blur' | 'focus'>>;
+    }>, {}, {}, {}, Pick<ElementUi.Select, 'blur' | 'focus'>>;
     export const Slider: DefineComponent<Partial<ElementUi.Slider & {
         onChange: (value: any) => any;
         onInput: (value: any) => any;
@@ -367,7 +367,7 @@ declare module 'element-ui' {
                  *  the table. This slot will be displayed above the summary row if there is one. */
                 append?: () => VNodes,
             },
-        }>, {}, {}, ComputedOptions<any>, Pick<ElementUi.Table, 'clearSelection' | 'toggleRowSelection' | 'toggleAllSelection' | 'toggleRowExpansion'
+        }>, {}, {}, {}, Pick<ElementUi.Table, 'clearSelection' | 'toggleRowSelection' | 'toggleAllSelection' | 'toggleRowExpansion'
             | 'setCurrentRow' | 'clearSort' | 'clearFilter' | 'doLayout' | 'sort'>>;
     export const TableColumn: DefineComponent<Partial<ElementUi.TableColumn & {
         /** slots for tsx */
@@ -420,7 +420,7 @@ declare module 'element-ui' {
         onInput: (value: any) => any;
         onFocus: (e: Event) => any;
         onBlur: (e: Event) => any;
-    }>, {}, {}, ComputedOptions<any>, Pick<ElementUi.TimePicker, 'focus'>>;
+    }>, {}, {}, {}, Pick<ElementUi.TimePicker, 'focus'>>;
     export const TimeSelect: DefineComponent<Partial<ElementUi.TimeSelect>>;
     export const Tooltip: DefineComponent<Partial<ElementUi.Tooltip>>;
     export const Transfer: DefineComponent<Partial<Omit<ElementUi.Transfer, 'clearQuery'> & {
@@ -428,7 +428,7 @@ declare module 'element-ui' {
         onInput: (value: any[]) => any;
         'on-left-check-change': (value: any[]) => any;
         'on-right-check-change': (value: any[]) => any;
-    }>, {}, {}, ComputedOptions<any>, Pick<ElementUi.Transfer, 'clearQuery'>>;
+    }>, {}, {}, {}, Pick<ElementUi.Transfer, 'clearQuery'>>;
     export const Tree: DefineComponent<Partial<Omit<ElementUi.Tree, 'filter' | 'updateKeyChildren' | 'getCheckedNodes' | 'setCheckedNodes' | 'getCheckedKeys'
         | 'setCheckedKeys' | 'setChecked' | 'getHalfCheckedNodes' | 'getHalfCheckedKeys' | 'getCurrentKey' | 'getCurrentNode' | 'setCurrentKey' | 'setCurrentNode'
         | 'getNode' | 'remove' | 'append' | 'insertBefore' | 'insertAfter'> & {
@@ -455,7 +455,7 @@ declare module 'element-ui' {
                 /** Custom content for tree nodes. The scope parameter is { node, data } */
                 default?: (scoped: { node: any, data: any }) => VNodes,
             },
-        }>, {}, {}, ComputedOptions<any>, Pick<ElementUi.Tree, 'filter' | 'updateKeyChildren' | 'getCheckedNodes' | 'setCheckedNodes' | 'getCheckedKeys'
+        }>, {}, {}, {}, Pick<ElementUi.Tree, 'filter' | 'updateKeyChildren' | 'getCheckedNodes' | 'setCheckedNodes' | 'getCheckedKeys'
             | 'setCheckedKeys' | 'setChecked' | 'getHalfCheckedNodes' | 'getHalfCheckedKeys' | 'getCurrentKey' | 'getCurrentNode' | 'setCurrentKey' | 'setCurrentNode'
             | 'getNode' | 'remove' | 'append' | 'insertBefore' | 'insertAfter'>>;
     export const Upload: DefineComponent<Partial<Omit<ElementUi.Upload, 'clearFiles' | 'abort' | 'submit'> & {
@@ -476,7 +476,7 @@ declare module 'element-ui' {
             /** content of tips */
             tip?: () => VNodes,
         },
-    }>, {}, {}, ComputedOptions<any>, Pick<ElementUi.Upload, 'clearFiles' | 'abort' | 'submit'>>;
+    }>, {}, {}, {}, Pick<ElementUi.Upload, 'clearFiles' | 'abort' | 'submit'>>;
     export const Divider: DefineComponent<Partial<ElementUi.Divider>>;
     export const Link: DefineComponent<Partial<ElementUi.Link>>;
     export const Image: DefineComponent<Partial<ElementUi.Image & {
