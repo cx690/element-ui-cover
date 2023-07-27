@@ -393,7 +393,8 @@ declare module 'element-ui' {
         onInput: (name: string) => any;
     }>>;
     export const TabPane: DefineComponent<Partial<ElementUi.TabPane>>;
-    export const Tag: DefineComponent<Partial<ElementUi.Tag & {
+    export const Tag: DefineComponent<Partial<Omit<ElementUi.Tag, 'type'> & {
+        type: 'success' | 'info' | 'warning' | 'danger';//el-tag type is error!
         onClick: () => any;
         onClose: () => any;
     }>>;
