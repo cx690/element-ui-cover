@@ -36,7 +36,7 @@ declare module 'element-ui' {
     import type { DefineComponent } from 'vue';
     export * from 'element-ui/types/index';
     import ElementUi from 'element-ui/types/index';
-    export const Alert: DefineComponent<Partial<ElementUi.Alert> & {
+    export const Alert: DefineComponent<Partial<ElementUi.Alert & {
         onClose(): any;
         /** slots for tsx */
         scopedSlots: {
@@ -50,7 +50,7 @@ declare module 'element-ui' {
             /** title content */
             title?: () => VNodes,
         },
-    }>;
+    }>>;
     export const Aside: DefineComponent<Partial<ElementUi.Aside>>;
     export const Autocomplete: DefineComponent<Partial<Omit<ElementUi.Autocomplete, 'focus'>
     >, {}, {}, {}, Pick<ElementUi.Autocomplete, 'focus'>>;
