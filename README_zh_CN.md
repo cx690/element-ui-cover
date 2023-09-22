@@ -1,4 +1,5 @@
 使用此类型库，你可以从element-ui中获取正确的类型推导，这个会覆盖element-ui的部分类型导出。
+大陆地区看不到图片可以查看这里：https://gitee.com/cx690/element-ui-cover
 
 # 安装
 `yarn add element-ui-cover --dev`
@@ -32,7 +33,7 @@ tsconfig.json 中需要增加以下配置：
   ...others,
 }
 ```
-![template view,看不到图片可以查看这里：https://gitee.com/cx690/element-ui-cover#%E5%AE%89%E8%A3%85](./imgs/button.png)
+![template view](./imgs/button.png)
 
 ### 对于全局组件 (需要使用 vscode 的插件 Volar)
 如果element-ui被注册为全局组件使用，按照以下设置即可：

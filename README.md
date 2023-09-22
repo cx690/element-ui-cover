@@ -33,7 +33,7 @@ tsconfig.json add config as below:
   ...others,
 }
 ```
-![template view,看不到图片可以查看这里：https://gitee.com/cx690/element-ui-cover#%E5%AE%89%E8%A3%85](.//imgs/button.png)
+![template view](.//imgs/button.png)
 
 ### for global components (with vscode plugin Volar)
 If element-ui components is registered as global components, set config as below:
