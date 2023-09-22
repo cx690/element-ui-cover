@@ -25,15 +25,8 @@
   ],
   "files": [
     "index.d.ts",
-    "button.png",
-    "buttonjsx.png",
-    "error.png",
-    "com.g.png",
     "component.g.d.ts",
-    "slots.png",
-    "comopt.png",
-    "events.png",
-    "methods.png",
+    "imgs",
     "README.md",
     "README_zh_CN.md"
   ],

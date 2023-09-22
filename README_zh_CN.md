@@ -32,7 +32,7 @@ tsconfig.json 中需要增加以下配置：
   ...others,
 }
 ```
-![template view](./button.png)
+![template view,看不到图片可以查看这里：https://gitee.com/cx690/element-ui-cover#%E5%AE%89%E8%A3%85](./imgs/button.png)
 
 ### 对于全局组件 (需要使用 vscode 的插件 Volar)
 如果element-ui被注册为全局组件使用，按照以下设置即可：
@@ -52,22 +52,22 @@ tsconfig.json 中需要增加以下配置：
 }
 ```
 然后就可以正常使用了:
-![global components view](./com.g.png)
-![global components option view](./comopt.png)
+![global components view](./imgs/com.g.png)
+![global components option view](./imgs/comopt.png)
 
 甚至部分事件也有支持
-![events view](./events.png)
+![events view](./imgs/events.png)
 
 ### 对tsx语法
 - 由于 [@vue/babel-preset-jsx](https://github.com/vuejs/jsx-vue2) 转换属性 `scopedSlots` 为插槽,所以内部插槽使用了 `scopedSlots` 属性声明(但是Volar使用`$scopedSlots`,这是个问题);
-![tsx view](./buttonjsx.png)
-![slots view](./slots.png)
+![tsx view](./imgs/buttonjsx.png)
+![slots view](./imgs/slots.png)
 
 ### 类型错误
-![type error view](./error.png)
+![type error view](./imgs/error.png)
 
 ### ref 获取实例类型
-![instance type view](./methods.png)
+![instance type view](./imgs/methods.png)
 
 # peerDependencies 预依赖
 vue和element-ui两个库是必须的。

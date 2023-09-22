@@ -33,7 +33,7 @@ tsconfig.json add config as below:
   ...others,
 }
 ```
-![template view](./button.png)
+![template view,看不到图片可以查看这里：https://gitee.com/cx690/element-ui-cover#%E5%AE%89%E8%A3%85](.//imgs/button.png)
 
 ### for global components (with vscode plugin Volar)
 If element-ui components is registered as global components, set config as below:
@@ -53,22 +53,22 @@ If element-ui components is registered as global components, set config as below
 }
 ```
 Then it will work:
-![global components view](./com.g.png)
-![global components option view](./comopt.png)
+![global components view](.//imgs/com.g.png)
+![global components option view](.//imgs/comopt.png)
 
 Some events is also supported.
-![events view](./events.png)
+![events view](.//imgs/events.png)
 
 ### for tsx
 - The [@vue/babel-preset-jsx](https://github.com/vuejs/jsx-vue2) transition property `scopedSlots` to slots,so the slots use `scopedSlots` (but the Volar use `$scopedSlots`,this is a problem);
-![tsx view](./buttonjsx.png)
-![slots view](./slots.png)
+![tsx view](.//imgs/buttonjsx.png)
+![slots view](.//imgs/slots.png)
 
 ### type error
-![type error view](./error.png)
+![type error view](.//imgs/error.png)
 
 ### ref get instance type
-![instance type view](./methods.png)
+![instance type view](.//imgs/methods.png)
 
 # peerDependencies
 vue and element-ui is required.
