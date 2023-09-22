@@ -178,10 +178,13 @@ declare module 'element-ui' {
     export const DropdownItem: DefineComponent<Partial<ElementUi.DropdownItem>>;
     export const DropdownMenu: DefineComponent<Partial<ElementUi.DropdownMenu>>;
     export const Footer: DefineComponent<Partial<ElementUi.Footer>>;
-    export const Form: DefineComponent<Partial<Omit<ElementUi.Form, 'validate' | 'validateField' | 'resetFields' | 'clearValidate'> & {
+    export const Form: DefineComponent<Partial<Omit<ElementUi.Form, 'model' | 'rules' | 'validate' | 'validateField' | 'resetFields' | 'clearValidate'> & {
+        model: Record<string, any>,
+        rules: RulesType,
         onValidate: (...args: any[]) => any;
     }>, {}, {}, {}, Pick<ElementUi.Form, 'validate' | 'validateField' | 'resetFields' | 'clearValidate'>>;
-    export const FormItem: DefineComponent<Partial<Omit<ElementUi.FormItem, 'resetField' | 'clearValidate'> & {
+    export const FormItem: DefineComponent<Partial<Omit<ElementUi.FormItem, 'rules' | 'resetField' | 'clearValidate'> & {
+        rules: RuleItem | RuleItem[],
         /** slots for tsx */
         scopedSlots: {
             /** content of Form Item */
@@ -682,4 +685,46 @@ declare module 'element-ui' {
             extra?: () => VNodes,
         },
     }>>;
+
+    //-----------------rules-----------------------------
+    type SyncValidateResult = boolean | Error | string | (Error | string)[];
+
+    export interface RuleItem {
+        /** default type is 'string' */
+        type?: 'string' | 'number' | 'boolean' | 'method' | 'regexp' | 'integer' | 'float' | 'array' | 'object' | 'enum' | 'date' | 'url' | 'hex' | 'email',
+        required?: boolean,
+        pattern?: RegExp | string,
+        /** Range of type 'string' and 'array' */
+        min?: number,
+        /** Range of type 'string' and 'array' */
+        max?: number,
+        /** Length of type 'string' and 'array' */
+        len?: number,
+        /** possible values of type 'enum' */
+        enum?: (string | number | boolean | null | undefined)[],
+        whitespace?: boolean,
+        /** ignore when without required */
+        fields?: Record<string, Rule>,
+        /** 'object' or 'array' containing validation rules */
+        defaultField?: Rule,
+        transform?: (value: any) => any,
+        message?: string | ((str?: string) => string),
+        validator?: (
+            rule: InternalRuleItem,
+            value: any,
+            callback: (error?: string | Error) => void,
+            ...args: any[]
+        ) => SyncValidateResult | void | Promise<SyncValidateResult>,
+        trigger?: 'change' | 'blur' | ('change' | 'blur')[],
+        [key: string]: any,
+    }
+    type InternalRuleItem = {
+        field: string,
+        fullField: string,
+        type: string,
+        [key: string]: any,
+    }
+    type Rule = RuleItem | RuleItem[];
+
+    export type RulesType = Record<string, Rule>;
 }
