@@ -690,8 +690,12 @@ declare module 'element-ui' {
     type SyncValidateResult = boolean | Error | string | (Error | string)[];
 
     export interface RuleItem {
-        /** default type is 'string' */
-        type?: 'string' | 'number' | 'boolean' | 'method' | 'regexp' | 'integer' | 'float' | 'array' | 'object' | 'enum' | 'date' | 'url' | 'hex' | 'email',
+        /** 
+         * maybe these value:
+         * 'string' | 'number' | 'boolean' | 'method' | 'regexp' | 'integer' | 'float' | 'array' | 'object' | 'enum' | 'date' | 'url' | 'hex' | 'email' 
+         * default type is 'string' 
+        */
+        type?: string,
         required?: boolean,
         pattern?: RegExp | string,
         /** Range of type 'string' and 'array' */
@@ -715,7 +719,11 @@ declare module 'element-ui' {
             callback: (error?: string | Error) => void,
             ...args: any[]
         ) => SyncValidateResult | void | Promise<SyncValidateResult>,
-        trigger?: 'change' | 'blur' | ('change' | 'blur')[],
+        /** 
+         * maybe these value:
+         * 'change' | 'blur' | ('change' | 'blur')[]
+        */
+        trigger?: string | string[],
         [key: string]: any,
     }
     type InternalRuleItem = {
