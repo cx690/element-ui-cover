@@ -83,6 +83,11 @@ declare module 'vue' {
         ElDescriptionsItem: typeof import('element-ui')['DescriptionsItem']
         ElResult: typeof import('element-ui')['Result']
     }
+
+    export interface ComponentCustomProperties {
+        /** Displays Loading animation in a container  */
+        vLoading?: boolean;
+    }
 }
 
-export {}
+export { }
