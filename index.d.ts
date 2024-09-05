@@ -133,6 +133,8 @@ declare module 'element-ui' {
     }>, {}, {}, {}, Pick<ElementUi.DatePicker, 'focus'>>;
     export const Dialog: DefineComponent<Partial<ElementUi.Dialog & {
         visible?: boolean;
+        /** whether to append Dialog itself to body. A nested Dialog should have this attribute set to true */
+        appendToBody?: boolean;
         onOpen: () => any;
         onOpened: () => any;
         onClose: () => any;
