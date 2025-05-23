@@ -351,7 +351,7 @@ declare module 'element-ui' {
             /** configuration for rendering nested data
              * @default { hasChildren: 'hasChildren', children: 'children' }
              */
-            'tree-props'?: { hasChildren?: string, children: string };
+            'tree-props'?: { hasChildren?: string, children?: string };
             /** key of row data, used for optimizing rendering. Required if reserve-selection is on or display tree data. When its type is String, 
              * multi-level access is supported, e.g. user.info.id, but user.info[0].id is not supported, in which case Function should be used. */
             rowKey?: string | ((row: Record<string, any>) => any);
