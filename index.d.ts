@@ -342,6 +342,16 @@ declare module 'element-ui' {
     }>>;
     export const Table: DefineComponent<Partial<Omit<ElementUi.Table, 'clearSelection' | 'toggleRowSelection' | 'toggleAllSelection' | 'toggleRowExpansion'
         | 'setCurrentRow' | 'clearSort' | 'clearFilter' | 'doLayout' | 'sort' | 'rowKey'> & {
+            /** size of Table */
+            size?: 'medium' | 'small' | 'mini';
+            /** whether selection row is highlighted */
+            'highlight-selection-row'?: boolean;
+            /** method that returns rowspan and colspan */
+            'span-method'?: (params: { row: any, column: any, rowIndex: number, columnIndex: number }) => { rowspan: number, colspan: number } | [number, number] | void;
+            /** configuration for rendering nested data
+             * @default { hasChildren: 'hasChildren', children: 'children' }
+             */
+            'tree-props'?: { hasChildren?: string, children: string };
             /** key of row data, used for optimizing rendering. Required if reserve-selection is on or display tree data. When its type is String, 
              * multi-level access is supported, e.g. user.info.id, but user.info[0].id is not supported, in which case Function should be used. */
             rowKey?: string | ((row: Record<string, any>) => any);
