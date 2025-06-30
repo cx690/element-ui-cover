@@ -125,7 +125,8 @@ declare module 'element-ui' {
         "on-active-change": (value: any) => any;
     }>>;
     export const Container: DefineComponent<Partial<ElementUi.Container>>;
-    export const DatePicker: DefineComponent<Partial<Omit<ElementUi.DatePicker, 'focus'> & {
+    export const DatePicker: DefineComponent<Partial<Omit<ElementUi.DatePicker, 'focus' | 'value'> & {
+        value?: Date | string | Date[] | string[] | number | null;
         onChange: (value: any) => any;
         onInput: (value: any) => any;
         onFocus: (e: Event) => any;
