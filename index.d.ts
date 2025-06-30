@@ -126,7 +126,7 @@ declare module 'element-ui' {
     }>>;
     export const Container: DefineComponent<Partial<ElementUi.Container>>;
     export const DatePicker: DefineComponent<Partial<Omit<ElementUi.DatePicker, 'focus' | 'value'> & {
-        value?: Date | string | Date[] | string[] | number | null;
+        value?: Date | string | Date[] | string[] | number | number[] | null;
         onChange: (value: any) => any;
         onInput: (value: any) => any;
         onFocus: (e: Event) => any;
