@@ -285,6 +285,8 @@ declare module 'element-ui' {
     }>>;
     export const Row: DefineComponent<Partial<ElementUi.Row>>;
     export const Select: DefineComponent<Partial<Omit<ElementUi.Select, 'blur' | 'focus'> & {
+        /** whether to collapse tags to a text when multiple selecting */
+        collapseTags?: boolean;
         onChange: (value: any) => any;
         onInput: (value: any) => any;
         onFocus: (e: Event) => any;
