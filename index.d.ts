@@ -287,6 +287,10 @@ declare module 'element-ui' {
     export const Select: DefineComponent<Partial<Omit<ElementUi.Select, 'blur' | 'focus'> & {
         /** whether to collapse tags to a text when multiple selecting */
         collapseTags?: boolean;
+        /** when multiple and filter is true, whether to reserve current keyword after selecting an option */
+        reserveKeyword?: boolean;
+        /**	for non-filterable Select, this prop decides if the option menu pops up when the input is focused */
+        automaticDropdown?: boolean;
         onChange: (value: any) => any;
         onInput: (value: any) => any;
         onFocus: (e: Event) => any;
