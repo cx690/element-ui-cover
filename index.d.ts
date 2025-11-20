@@ -274,13 +274,13 @@ declare module 'element-ui' {
     }>>;
     export const Radio: DefineComponent<Partial<ElementUi.Radio & {
         /** size of the Radio, only works when border is true */
-        size?: 'mini' | 'small' | 'medium ';
+        size?: 'mini' | 'small' | 'medium';
         onInput: (value: any) => any;
     }>>;
     export const RadioButton: DefineComponent<Partial<ElementUi.RadioButton>>;
     export const RadioGroup: DefineComponent<Partial<Omit<ElementUi.RadioGroup, 'size'> & {
         /** the size of radio buttons or bordered radios */
-        size?: 'mini' | 'small' | 'medium ';
+        size?: 'mini' | 'small' | 'medium';
         onInput: (value: any) => any;
     }>>;
     export const Row: DefineComponent<Partial<ElementUi.Row>>;
