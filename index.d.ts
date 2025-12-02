@@ -395,7 +395,9 @@ declare module 'element-ui' {
             },
         }>, {}, {}, {}, Pick<ElementUi.Table, 'clearSelection' | 'toggleRowSelection' | 'toggleAllSelection' | 'toggleRowExpansion'
             | 'setCurrentRow' | 'clearSort' | 'clearFilter' | 'doLayout' | 'sort'>>;
-    export const TableColumn: DefineComponent<Partial<ElementUi.TableColumn & {
+    export const TableColumn: DefineComponent<Partial<Omit<ElementUi.TableColumn, 'filterMethod' | 'formatter'> & {
+        formatter: (row: object, column: TableColumn, cellValue: any, index: number) => any,
+        filterMethod: (value: any, row: Record<string, any>, column: any) => boolean,
         /** slots for tsx */
         scopedSlots: {
             /** Custom content for table columns. The scope parameter is { row, column, $index } */
@@ -758,4 +760,6 @@ declare module 'element-ui' {
     type Rule = RuleItem | RuleItem[];
 
     export type RulesType = Record<string, Rule>;
+    export type FormRules = Record<string, Rule>;
+    export type FormInstance = InstanceType<typeof Form>;
 }
